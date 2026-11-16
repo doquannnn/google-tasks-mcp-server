@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "google-tasks": {
+      "command": "node",
+      "args": ["/path/to/google-tasks-mcp-server/src/server.ts"],
+      "env": {
+        "GOOGLE_CREDENTIALS_FILE": "/path/to/google-tasks-mcp-server/credentials.json",
+        "GOOGLE_TOKEN_FILE": "/path/to/google-tasks-mcp-server/token.json"
+      }
+    },
+    "google-tasks-http": {
+      "type": "http",
+      "url": "http://127.0.0.1:8787/mcp",
+      "headers": { "Authorization": "Bearer ${MCP_AUTH_TOKEN}" }
+    }
+  }
+}
